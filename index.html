@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="bg-primary">
+    <header class="container text-white"><h4 class="py-2">Employee Data</h4></header>
+      <main class="page bg-white" id="petratings">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+
+
+<div id="main-app">
+
+  <div class="add-appointment card textcenter mt-3">
+    <div class="apt-addheading card-header bg-primary text-white">
+      <i class="fas fa-plus"></i> Add New Employee
+    </div>
+
+    <div class="card-body">
+
+      <form id="aptForm">
+      
+        <div class="form-group form-row">
+          <label class="col-md-2 col-form-label text-md-right" for="firstName">Employee Name</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" name="firstName" id="firstName" placeholder="first Name">
+          </div><!-- col-md-10 --> 
+        </div><!-- form-group --> 
+
+        <div class="form-group form-row">
+          <label class="col-md-2 col-form-label text-md-right" for="lastName">Last Name</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" id="lastName" placeholder="last Name">
+          </div><!-- col-md-10 -->
+        </div><!-- form-group --> 
+
+        <div class="form-group form-row">
+          <label class="col-md-2 col-form-label text-md-right" for="aptDate">Date of Joining</label>
+          <div class="col-md-4">
+            <input type="date" class="form-control" id="aptDate">
+          </div><!-- col-md-4 --> 
+
+          <label class="col-md-2 col-form-label text-md-right" for="empId">Employee ID</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control" name="empId" id="empId" placeholder="emp id">
+          </div><!-- col-md-4 --> 
+        </div><!-- form-group -->
+
+        <div class="form-group form-row">
+            <label class="col-md-2 col-form-label text-md-right" for="mobileNum">Contact</label>
+            <div class="col-md-4">
+              <input type="number" class="form-control" id="mobileNum" placeholder="contact number" autocomplete="off">
+              <div id="mobilecheck"></div>
+            </div><!-- col-md-4 --> 
+
+            
+  
+            <label class="col-md-2 col-form-label text-md-right" for="jobTitle">Job Title</label>
+            <div class="col-md-4">
+              <input type="text" class="form-control" name="jobTitle" id="jobTitle" placeholder="jobTitle">
+            </div><!-- col-md-4 --> 
+          </div><!-- form-group -->
+
+          <div class="form-group form-row">
+            <label class="col-md-2 col-form-label text-md-right" for="deptName">Department Name</label>
+            <div class="col-md-4">
+              <input type="text" class="form-control" id="deptName" placeholder="deptName">
+            </div><!-- col-md-4 --> 
+  
+            <label class="col-md-2 col-form-label text-md-right" for="companyBranchId">Company Branch Id</label>
+            <div class="col-md-4">
+              <input type="text" class="form-control" name="companyBranchId" id="companyBranchId" placeholder="companyBranchId">
+            </div><!-- col-md-4 --> 
+          </div><!-- form-group -->
+
+        <div class="form-group form-row">
+          <label class="col-md-2 text-md-right" for="aptNotes">Address</label>
+          <div class="col-md-10">
+            <textarea class="form-control" rows="4" cols="50" name="aptNotes" id="aptNotes" placeholder="Address"></textarea>
+          </div><!-- col-md-10 --> 
+        </div><!-- form-group -->
+
+
+        <div class="form-group form-row">
+            <label class="col-md-2 col-form-label text-md-right" for="location">Location</label>
+            <div class="col-md-4">
+              <input type="text" class="form-control" id="location" placeholder="location">
+            </div><!-- col-md-4 --> 
+  
+            <label class="col-md-2 col-form-label text-md-right" for="city">City</label>
+            <div class="col-md-4">
+              <input type="text" class="form-control" name="city" id="city" placeholder="city">
+            </div><!-- col-md-4 --> 
+          </div><!-- form-group -->
+
+          <div class="form-group form-row">
+            <label class="col-md-2 col-form-label text-md-right" for="state">state</label>
+            <div class="col-md-4">
+              <input type="text" class="form-control" id="state" placeholder="state">
+            </div><!-- col-md-4 --> 
+  
+            <label class="col-md-2 col-form-label text-md-right" for="country">Country</label>
+            <div class="col-md-4">
+              <input type="text" class="form-control" name="country" id="country" placeholder="country">
+            </div><!-- col-md-4 --> 
+          </div><!-- form-group -->
+
+
+
+        <div class="form-group form-row mb-0">
+          <div class="offset-md-2 col-md-10">
+            <button type="submit" class="btn btn-primary d-block ml-auto">Add</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+
+  <div class="search-appointments row justify-content-center my-4">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input id="SearchApts" placeholder="Search" type="text" class="form-control" aria-label="Search Appointments">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-primary dropdown-toggle"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by: <span class="caret"></span>
+          </button>
+
+          <div class="sort-menu dropdown-menu dropdown-menu-right">
+            <a class="sort-by dropdown-item" href="#" id="sort-firstName"> Name</a>
+            <a class="sort-by dropdown-item active" href="#" id="sort-aptDate">Date</a>
+            <a class="sort-by dropdown-item" href="#" id="sort-aptTime">Employee ID</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="sort-dir dropdown-item" href="#" id="sort-asc">Asc</a>
+            <a class="sort-dir dropdown-item active" href="#" id="sort-desc">Desc</a>
+          </div>
+        </div><!-- input-group-btn --> 
+      </div><!-- input-group --> 
+    </div><!-- col-md-offset-3 --> 
+  </div><!-- search-appointments -->
+
+  <div id="empList" class="appointment-list item-list mb-3">
+  </div><!-- appointment-list -->
+
+    </div><!-- main-app -->
+    <!-- App Ends Here -->
+    
+                </div><!-- col-md-12 -->
+              </div><!-- row -->
+            </div><!-- container -->
+        </main><!-- main -->
+
+
+        <footer class="container d-flex text-white py-2">
+            <p>All contents &copy; 2016 <a href="http://lynda.com">koovers.com</a>. All rights reserved.</p>
+          <div class="ml-auto">
+            <a class="d-block" href="#">Terms of use</a>
+            <a class="d-block" href="#">Privacy policy</a>
+          </div><!-- col-md-6 -->
+        </footer><!-- footer -->
+    
+        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js" integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"  />
+        <script src="js/lib/underscore-min.js"></script>
+        <script src="script.js"></script>
+      </body>
+    </html>
